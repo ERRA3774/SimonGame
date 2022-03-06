@@ -10,9 +10,13 @@ body {
   color: #FEF2BF;
 }
 
+.row {
+  display: block;
+}
+
 .container {
   display: block;
-  width: 50%;
+  width: 90%;
   margin: auto;
 }
 
