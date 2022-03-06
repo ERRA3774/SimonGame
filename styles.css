@@ -1,6 +1,8 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  overflow:hidden;
+  width:100%;
 }
 
 #level-title {
