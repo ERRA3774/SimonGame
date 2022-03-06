@@ -6,13 +6,20 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
-$(document).keypress(function() {
+if (screen && screen.width < 900) {
+  $(document).on("touchend", start);
+  $("#level-title").text("Tap Anywhere to Start");
+} else {
+  $(document).on("keypress", start);
+}
+
+function start() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
-});
+}
 
 $(".btn").click(function() {
   if (level != 0) {
